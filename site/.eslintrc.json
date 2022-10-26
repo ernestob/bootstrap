@@ -1,15 +1,29 @@
 {
+  "extends": "../.eslintrc.json",
   "env": {
     "browser": true,
     "node": false
   },
+  "parserOptions": {
+    "sourceType": "script"
+  },
   "plugins": [
     "markdown"
   ],
+  "rules": {
+    "no-new": "off",
+    "prefer-template": "error",
+    "strict": "error",
+    "unicorn/no-array-for-each": "off",
+    "unicorn/numeric-separators-style": "off",
+    "unicorn/prefer-node-protocol": "off"
+  },
   "overrides": [
     {
       // 2. Enable the Markdown processor for all .md files.
-      "files": ["./**/*.md"],
+      "files": [
+        "./**/*.md"
+      ],
       "processor": "markdown/markdown"
     },
     {
@@ -38,18 +52,5 @@
         "no-redeclare": "off"
       }
     }
-  ],
-  "parserOptions": {
-    "sourceType": "script"
-  },
-  "extends": "../.eslintrc.json",
-  "rules": {
-    "no-new": "off",
-    "prefer-template": "error",
-    "spaced-comment": "off",
-    "strict": "error",
-    "unicorn/no-array-for-each": "off",
-    "unicorn/numeric-separators-style": "off",
-    "unicorn/prefer-node-protocol": "off"
-  }
+  ]
 }
